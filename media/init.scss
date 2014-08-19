@@ -1,0 +1,7 @@
+@import "media";
+
+@include exports('media-src') {
+  @if use-abstraction(media) {
+    @include media-src;
+  }
+}

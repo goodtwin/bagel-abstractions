@@ -1,0 +1,31 @@
+@mixin media-src {
+  .ui.media {
+      display: block;
+
+      &:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      .label {
+          float: left;
+
+          > img {
+              display: block;
+          }
+      }
+
+      .content {
+          overflow: hidden;
+          display: block;
+      }
+
+      &.reversed {
+
+        .label {
+          float: right;
+        }
+      }
+  }
+}

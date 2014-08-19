@@ -1,0 +1,7 @@
+@import "list";
+
+@include exports('list-src') {
+	@if use-abstraction(list) {
+		@include list-src;
+	}
+}

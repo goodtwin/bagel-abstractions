@@ -1,0 +1,28 @@
+@mixin grid-src {
+	.ui.grid {
+	    @extend %bare-list;
+	    margin-left: -base(grid-gutter);
+
+		> .item {
+		    display: inline-block;
+		    padding-left: base(grid-gutter);
+		    vertical-align: top;
+		    width: 100%;
+		}
+
+		&.flush {
+			margin-left: 0;
+
+			> .item {
+				padding-left: 0;
+			}
+		}
+
+		&.auto {
+
+			> .item {
+				width: auto;
+			}
+		}
+	}
+}

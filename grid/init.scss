@@ -1,0 +1,7 @@
+@import "grid";
+
+@include exports('grid-src') {
+	@if use-abstraction(grid) {
+		@include grid-src;
+	}
+}

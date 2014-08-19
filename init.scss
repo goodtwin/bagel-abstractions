@@ -1,0 +1,13 @@
+@import "config";
+
+@if variable-exists(globalConfig) {
+  $globalConfig: map_merge($defaultConfig, $globalConfig)!global;
+} @else {
+  $globalConfig: $defaultConfig!global;
+}
+
+@import "bagel-functions/init.scss";
+
+@import "list/init";
+@import "media/init";
+@import "grid/init";

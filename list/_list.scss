@@ -1,0 +1,22 @@
+@mixin list-src {
+	%bare-list {
+		margin:  0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.ui.list {
+
+		li {
+
+				> ul,
+				> ol {
+						margin-bottom: 0;
+				}
+		}
+
+		&.bare {
+			@extend %bare-list;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "bagel-abstractions",
+  "version": "0.1.0",
+  "title": "Bagel UI",
+  "description": "Delicious UI Framework",
+  "homepage": "http://goodtwin.co",
+  "contributors": [
+    "Andrew Wirick <andrew@goodtwin.co>",
+    "Greg Thompson <greg@goodtwin.co>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goodtwin/bagel-abstractions.git"
+  },
+  "dependencies": {
+    "bagel-functions": "git://github.com/goodtwin/bagel-functions.git#v0.1.4"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-myth": "~0.1.1",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-shared-config": "https://github.com/goodtwin/grunt-shared-config/archive/1f0a6e12b365ad9bda3e411f2a2cb74683df1d2e.tar.gz"
+  }
+}
