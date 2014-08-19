@@ -1,7 +1,8 @@
-@import "grid";
+@import "grid-base";
+@import "grid-ideal";
 
 @include exports('grid-src') {
 	@if use-abstraction(grid) {
-		@include grid-src;
+		@include grid-base-src;
 	}
 }

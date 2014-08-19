@@ -1,6 +1,6 @@
 {
   "name": "bagel-abstractions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Bagel UI",
   "description": "Delicious UI Framework",
   "homepage": "http://goodtwin.co",
@@ -14,7 +14,7 @@
     "url": "git://github.com/goodtwin/bagel-abstractions.git"
   },
   "dependencies": {
-    "bagel-functions": "git://github.com/goodtwin/bagel-functions.git#v0.1.4"
+    "bagel-functions": "git://github.com/goodtwin/bagel-functions.git#v0.1.5"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
