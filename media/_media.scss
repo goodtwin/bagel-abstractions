@@ -21,10 +21,49 @@
           display: block;
       }
 
+      &[class*='align-'] {
+        display: table;
+        width: 100%;
+
+        .label, .content {
+          display: table-cell;
+        }
+
+        .content {
+          width: 100%;
+        }
+      }
+
+      &.align-middle {
+
+        .label, .content {
+          vertical-align:middle;
+        }
+      }
+
+      &.align-bottom {
+
+        .label, .content {
+          vertical-align:baseline;
+        }
+      }
+
       &.reversed {
 
         .label {
           float: right;
+        }
+
+        &[class*='align-'] {
+          direction: rtl;
+
+          .label {
+            float: none;
+          }
+
+          .label, .content {
+            direction: rtl;
+          }
         }
       }
   }
