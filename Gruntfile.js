@@ -3,13 +3,35 @@ module.exports = function (grunt) {
   'use strict';
 
   var globalConfig = {
-    src: 'init.scss',
-    dist: 'init.css'
+    index: 'init',
+    docs: 'node_modules/bagel-styleguide/docs',
+    styleguide: 'guide',
+    dist: {
+      root: 'dist',
+      docs: 'dist/docs',
+      style: 'dist/style'
+    }
   };
-
   grunt.initConfig({
     globalConfig: globalConfig,
     pkg: grunt.file.readJSON('./package.json'),
+    assemble : {
+      docs: {
+        options: {
+          assets: '<%= globalConfig.docs  %>/assets',
+          flatten: false,
+          partials: ['<%= globalConfig.docs  %>/partials/*.hbs'],
+          layout: '<%= globalConfig.docs  %>/layouts/default.hbs',
+          data: ['<%= globalConfig.docs  %>/data/*.{json,yml}','config.{json,yml}']
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= globalConfig.styleguide  %>',
+          src: ['**/*.hbs'],
+          dest: '<%= globalConfig.dist.docs  %>'
+        }]
+      }
+    },
     shared_config: {
       style: {
         options: {
@@ -24,12 +46,17 @@ module.exports = function (grunt) {
       }
     },
     sass: {
-      dist: {
-        options: {
-          loadPath: ['./', 'node_modules/']
-        },
+      options: {
+        loadPath: ['./', 'node_modules/']
+      },
+      styleguide: {
         files : {
-          '<%= globalConfig.dist %>': '<%= globalConfig.src %>'
+          '<%= globalConfig.dist.docs  %>/stylesheets/styleguide.css': '<%= globalConfig.styleguide  %>/guide.scss'
+        }
+      },
+      dist: {
+        files : {
+          '<%= globalConfig.dist.style %>/style.css': '<%= globalConfig.index %>.scss'
         }
       }
     },
@@ -39,7 +66,12 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= globalConfig.dist %>': '<%= globalConfig.dist %>'
+          '<%= globalConfig.dist.style %>/style.css': '<%= globalConfig.dist.style %>/style.css'
+        }
+      },
+      styleguide: {
+        files: {
+          '<%= globalConfig.dist.docs  %>/stylesheets/styleguide.css' : '<%= globalConfig.dist.docs  %>/stylesheets/styleguide.css'
         }
       }
     },
@@ -52,9 +84,11 @@ module.exports = function (grunt) {
   });
 
 require('load-grunt-tasks')(grunt);
+grunt.loadNpmTasks('assemble');
 
 grunt.registerTask('default', ['build']);
 grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
-grunt.registerTask('build', ['shared_config', 'distcss']);
+grunt.registerTask('docscss', ['sass:styleguide', 'myth:styleguide']);
+grunt.registerTask('build', ['shared_config', 'distcss', 'docscss', 'assemble:docs']);
 
 };
