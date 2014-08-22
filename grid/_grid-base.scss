@@ -1,4 +1,7 @@
 @mixin grid-base-src {
+	/* Grid
+	========================================
+	======================================== */
 	.ui.grid {
 	    @extend %bare-list;
 	    margin-left: -base(grid-gutter);
