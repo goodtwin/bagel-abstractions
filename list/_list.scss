@@ -1,7 +1,20 @@
 @mixin list-src {
-	/* List
-	========================================
-	======================================== */
+	/**
+		* @name List
+		* @description <ul>, <ol>, <li>
+		* @section Abstractions
+		*
+		* @state .bare - Removes padding, margin, and list style
+		*
+		* @markup
+		*   <ul class="ui lit {{escaped}}">
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*    <li>ITEM</li>
+		*   </ul>
+		*
+		*/
 	%bare-list {
 		margin:  0;
 		padding: 0;
@@ -11,7 +24,6 @@
 	.ui.list {
 
 		li {
-
 				> ul,
 				> ol {
 						margin-bottom: 0;

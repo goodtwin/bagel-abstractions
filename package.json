@@ -1,6 +1,6 @@
 {
   "name": "bagel-abstractions",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "title": "Bagel UI",
   "description": "Delicious UI Framework",
   "homepage": "http://goodtwin.co",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "bagel-styleguide": "git://github.com/goodtwin/bagel-styleguide.git#v0.1.1",
-    "bagel-functions": "git://github.com/goodtwin/bagel-functions.git#v0.1.6"
+    "bagel-functions": "git://github.com/goodtwin/bagel-functions.git#v0.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
@@ -25,6 +25,7 @@
     "grunt-myth": "~0.1.1",
     "load-grunt-tasks": "~0.4.0",
     "grunt-shared-config": "~0.3.7",
-    "assemble": "~0.4.41"
+    "assemble": "~0.4.41",
+    "grunt-dss": "^1.0.8"
   }
 }

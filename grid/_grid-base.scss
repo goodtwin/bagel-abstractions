@@ -1,7 +1,20 @@
 @mixin grid-base-src {
-	/* Grid
-	========================================
-	======================================== */
+	/**
+		* @name Grid
+		* @description Simple, flexible, nestable grid
+		* @section Abstractions
+		*
+		* @state .flush - No padding/margn between grid items
+		* @state .auto - Vertically align contents to bottom
+		*
+		* @markup
+		*   <div class="ui grid {{escaped}}">
+		*    <div class="item">
+		*       ITEM
+		*     </div>
+		*   </div>
+		*
+		*/
 	.ui.grid {
 	    @extend %bare-list;
 	    margin-left: -base(grid-gutter);
