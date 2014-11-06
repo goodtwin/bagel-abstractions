@@ -1,7 +1,7 @@
 /**
 	* @name ideal-grid($idealWidth, $minWidth, $maxWidth, $minColumns, $maxColumns, $gutterWidth)
 	* @description Define the size limits to which an element (grid items are the obvious, but not exclusive use case) can grow and shrink in a responsive environment.
-	* @section Abstractions
+	* @section abstractions.ideal-grid
 	* @type mixin
 	*
 	* @param $idealWidth (Integer) - Desired grid item width

@@ -2,13 +2,13 @@
 	/**
 		* @name Grid
 		* @description Simple, flexible, nestable grid
-		* @section Abstractions
+		* @section abstractions.grid
 		*
 		* @state .flush - No padding/margn between grid items
 		* @state .auto - Vertically align contents to bottom
 		*
 		* @markup
-		*   <div class="ui grid {{escaped}}">
+		*   <div class="ui grid {{modifier}}">
 		*    <div class="item">
 		*       ITEM
 		*     </div>

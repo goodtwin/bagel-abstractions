@@ -7,7 +7,12 @@
 }
 
 @import "bagel-functions/init.scss";
-
+/**
+  * @name Abstractions
+  * @description Abstract, reusable bits of structural CSS
+  * @section abstractions
+  *
+  */
 @import "list/init";
 @import "media/init";
 @import "grid/init";

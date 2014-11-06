@@ -26,6 +26,6 @@
     "load-grunt-tasks": "~0.4.0",
     "grunt-shared-config": "~0.3.7",
     "assemble": "~0.4.41",
-    "grunt-dss": "^1.0.8"
+    "grunt-dss": "git://github.com/goodtwin/grunt-dss.git#d12a2a1f02e36160cc5d23f4b89a401fe68a5775"
   }
 }

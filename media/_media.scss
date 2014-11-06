@@ -2,14 +2,14 @@
   /**
     * @name Media
     * @description A take on @stubornella's media object: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
-    * @section Abstractions
+    * @section abstractions.media
     *
     * @state .align-middle - Vertically align contents to middle
     * @state .align-bottom - Vertically align contents to bottom
     * @state .reversed - Label to the right; Content to the left
     *
     * @markup
-    *   <div class="ui media {{escaped}}">
+    *   <div class="ui media {{modifier}}">
     *    <div class="label">
     *       <img src="http://placehold.it/150x150" alt="" />
     *     </div>
