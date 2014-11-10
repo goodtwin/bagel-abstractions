@@ -22,12 +22,13 @@
 	}
 
 	.ui.list {
+		list-style: default;
 
 		li {
-				> ul,
-				> ol {
-						margin-bottom: 0;
-				}
+			> ul,
+			> ol {
+					margin-bottom: 0;
+			}
 		}
 
 		&.bare {

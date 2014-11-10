@@ -49,6 +49,12 @@
           display: table-cell;
         }
 
+        .label {
+          > img {
+              max-width: none;
+          }
+        }
+
         .content {
           width: 100%;
         }
